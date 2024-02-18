@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/lib/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
+  (lib (name "RCT DS1307")(type "KiCad")(uri "${KIPRJMOD}/lib/RTC DS307/RCT DS1307.kicad_sym")(options "")(descr ""))
+  (lib (name "DFR0299")(type "KiCad")(uri "${KIPRJMOD}/lib/DFR0299/DFR0299.kicad_sym")(options "")(descr ""))
+)
