@@ -1,6 +1,6 @@
 Martilab, fruit d'une collaboration entre le [FabLab Chaux-de-Fonds](fablab-chaux-de-fonds.ch) et le [Muzoo](https://muzoo.ch/) , propose une approche pratique pour encourager la nidification des martinets. En plaçant des haut-parleurs discrets diffusant des signaux sonores adaptés près des nichoirs, nous offrons aux martinets un environnement accueillant et stimulant. Une initiative simple et efficace pour favoriser la préservation de ces oiseaux migrateurs essentiels à notre écosystème. 
 
-<div style="text-align: center;">
+<div align="center">
 <img src="./images/muzoo.svg" alt="Muzoo" width="200" style="vertical-align:middle;margin:50px 50px"/>
 <img src="./images/fablab.png" alt="Muzoo" width="200" style="vertical-align:middle; margin:50px 50px"/>
 </div>
