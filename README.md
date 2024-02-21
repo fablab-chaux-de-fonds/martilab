@@ -29,5 +29,7 @@ Les breadboards ou [platine d'expérimentation](https://fr.wikipedia.org/wiki/Pl
 
 ![prototype](./images/prototype.png)
 
-# Schema
+# Schema électrique
+Un [schéma électrique](https://fr.wikipedia.org/wiki/Sch%C3%A9ma_%C3%A9lectrique) est une représentation graphique des composants d'un [circuit électrique](https://fr.wikipedia.org/wiki/Circuit_%C3%A9lectrique) et de leurs connexions. Il utilise des symboles normalisés pour représenter des éléments tels que les résistances, les condensateurs, les transistors, les sources d'énergie et les connexions. Ce schéma permet de visualiser la structure et le fonctionnement d'un circuit de manière claire et concise. Les lignes reliant les symboles représentent les connexions électriques entre les composants, décrivant ainsi le cheminement du courant électrique à travers le circuit. Les schémas électriques sont essentiels pour la conception, la documentation et la compréhension des circuits électriques, facilitant la communication entre les ingénieurs, les concepteurs et les techniciens.
+
 ![schema](./images/schema.png)
