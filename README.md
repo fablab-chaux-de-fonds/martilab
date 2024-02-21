@@ -24,12 +24,23 @@ Martilab, fruit d'une collaboration entre le [FabLab Chaux-de-Fonds](fablab-chau
 |![pin_header_male](./images/pin_header_male.png)|[36-pin Male Header Breakaway 10 pieces](https://eu.mouser.com/ProductDetail/Adafruit/392?qs=GURawfaeGuBPkJS%252B96amuQ%3D%3D): Une barrette de connecteurs mâles de 36 broches, pouvant être séparée en sections plus petites. Les headers sont souvent utilisés pour faciliter la connexion entre les cartes électroniques.<br><br> Les pins évitent de devoir souder les dispositifs (Pico, RTC, DFPlayer) afin de pouvoir facilement les recycler et les utiliser dans d'autres projets.|
 |![pin_pico_female](./images/pin_pico_female.png)|[2 x 20 pin Female Headers](https://www.mouser.ch/ProductDetail/Adafruit/5583?qs=T%252BzbugeAwjicPo%2FCTvtw2w%3D%3D): Deux barrettes de connecteurs femelles de 20 broches chacune. Elles sont utilisées pour créer des connexions entre des cartes ou des composants électroniques.
 
+## Option
+| | |
+| ----------- | ----------- |
+| ![lipo_shim](./images/lipo_shim.png)|[LiPo SHIM](https://www.pi-shop.ch/lipo-shim-for-pico): Le LiPo SHIM (Switch Input Module) for Pico est un module conçu spécifiquement pour le Raspberry Pi Pico. Il est destiné à fournir une interface de gestion d'alimentation pour les batteries LiPo (polymère de lithium). Ce module est généralement compact et s'installe facilement sur la carte Raspberry Pi Pico. Il intègre des composants permettant la charge de la batterie LiPo tout en assurant la sécurité de celle-ci, notamment en évitant la surcharge. De plus, le LiPo SHIM peut inclure un interrupteur d'alimentation pour activer ou désactiver l'alimentation du Raspberry Pi Pico, offrant ainsi un contrôle pratique de l'alimentation. Ce type de module est particulièrement utile pour des projets portables nécessitant une alimentation autonome avec des batteries LiPo.
+|![pico-ups-a](./images/pico-ups-a.jpg)| [UPS Module](https://www.pi-shop.ch/ups-module-for-raspberry-pi-pico): Un module UPS (alimentation sans interruption) pour Raspberry Pi Pico est un accessoire qui assure une alimentation continue en cas de coupure de courant. Il intègre une batterie rechargeable pour maintenir l'alimentation pendant une durée déterminée, évitant ainsi la perte de données et garantissant un fonctionnement ininterrompu du Raspberry Pi Pico.
+
 # Prototype
 Les breadboards ou [platine d'expérimentation](https://fr.wikipedia.org/wiki/Platine_d%27exp%C3%A9rimentation) sont un outil essentiel pour le prototypage électronique en raison de leur facilité d'utilisation, de leur réutilisabilité, de leur facilité de dépannage, de leur flexibilité, de leur rapidité de prototypage et de leur accessibilité. Ils fournissent une plateforme pratique pour tester et développer des circuits électroniques avant de passer à des solutions plus permanentes, comme les [circuits imprimés](https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9).
 
 ![prototype](./images/prototype.png)
 
-# Schema électrique
+# Schéma électrique
 Un [schéma électrique](https://fr.wikipedia.org/wiki/Sch%C3%A9ma_%C3%A9lectrique) est une représentation graphique des composants d'un [circuit électrique](https://fr.wikipedia.org/wiki/Circuit_%C3%A9lectrique) et de leurs connexions. Il utilise des symboles normalisés pour représenter des éléments tels que les résistances, les condensateurs, les transistors, les sources d'énergie et les connexions. Ce schéma permet de visualiser la structure et le fonctionnement d'un circuit de manière claire et concise. Les lignes reliant les symboles représentent les connexions électriques entre les composants, décrivant ainsi le cheminement du courant électrique à travers le circuit. Les schémas électriques sont essentiels pour la conception, la documentation et la compréhension des circuits électriques, facilitant la communication entre les ingénieurs, les concepteurs et les techniciens.
 
 ![schema](./images/schema.png)
+
+# Design du circuit imprimé
+Le design du circuit imprimé (PCB) est le processus de création et de planification d'un agencement spécifique des composants électroniques sur une plaque de circuit imprimé. Il englobe la disposition stratégique des composants tels que les résistances, les condensateurs, les transistors et les connecteurs, ainsi que les pistes conductrices qui les relient de manière à assurer la fonctionnalité électrique du circuit. Le concepteur de PCB prend en compte divers aspects tels que la minimisation des interférences électromagnétiques, la gestion thermique, la facilité de fabrication et d'assemblage, tout en veillant à optimiser l'espace et à répondre aux exigences spécifiques du circuit électronique à concevoir. Un design de circuit imprimé bien réalisé contribue à la performance, à la fiabilité et à la rentabilité globale du produit électronique final.
+
+![footprint](./images/footprint.png)
