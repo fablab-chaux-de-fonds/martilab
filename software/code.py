@@ -67,8 +67,8 @@ if 8 <= rtc.datetime.tm_hour <= 9 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rt
     # print('Éteindre le lecteur DFPlayer')
     df_player_pin.direction = digitalio.Direction.INPUT  # Éteindre le lecteur DFPlayer
 
-    # Dormir pendant 23 heures et 15 minutes
-    time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 60 * 60 * 23.25)
+    # Dormir pendant 2 heures
+    time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 60 * 60 * 2)
     alarm.exit_and_deep_sleep_until_alarms(time_alarm)
 
 else:
