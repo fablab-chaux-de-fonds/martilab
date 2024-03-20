@@ -9,10 +9,28 @@ from DFPlayer import DFPlayer  # Importer la classe DFPlayer depuis un fichier e
 
 # Définir l'heure après avoir changé la pile.
 # Décommentez la ligne suivante et réglez l'heure actuelle
-# init_time = time.struct_time((2024, 2, 8, 7, 1, 0, 0, -1, -1))
+init_time = time.struct_time((2024, 2, 8, 7, 1, 0, 0, -1, -1))
 
 # Volume du lecteur
 volume = 40
+
+def log(message):
+   try:
+       with open("log.txt", "a") as f:
+           current_time = rtc.datetime
+           log_line = "{:04}-{:02}-{:02} {:02}:{:02}:{:02}: {}\n".format(
+               current_time.tm_year,
+               current_time.tm_mon,
+               current_time.tm_mday,
+               current_time.tm_hour,
+               current_time.tm_min,
+               current_time.tm_sec,
+               message
+           )
+           f.write(log_line)
+           f.close()
+   except OSError as e:
+       print("Error writing to log file:", e, "\n Hints: plug GP0 to ground. More info: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/data-logger")
 
 # Initialiser le RTC (Real-Time Clock)
 # Configurer le bus IO. Plus d'informations :
@@ -26,11 +44,8 @@ rtc = adafruit_ds1307.DS1307(i2c)
 if 'init_time' in locals():
     rtc.datetime = init_time
 
-# Afficher la date et l'heure actuelles du RTC
-# print(rtc.datetime)
-
-# Vérifier si l'heure actuelle est entre 07:00 et 07:30
-if rtc.datetime.tm_hour == 7 and 0 <= rtc.datetime.tm_min <= 30:
+# Vérifier si l'heure actuelle est entre 08:00 et 10:00 ou entre 12:00 et 14:00 ou entre 18:00 et 21:00
+if 8 <= rtc.datetime.tm_hour <= 9 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rtc.datetime.tm_hour < 21:
     # print("Démarrage du lecteur")
 
     # Initialiser le DFPlayer
@@ -44,8 +59,10 @@ if rtc.datetime.tm_hour == 7 and 0 <= rtc.datetime.tm_min <= 30:
     # print('Allumer le lecteur DFPlayer')
     df_player_pin.direction = digitalio.Direction.OUTPUT  # Allumer le lecteur DFPlayer
     time.sleep(1)  # Attendre 1 seconde
-    dfplayer.play()  # Commencer la lecture
-    time.sleep(30 * 60)  # Attendre 30 minutes (durée de lecture du DFPlayer)
+    log("Début de la lecture")
+    dfplayer.loop()  # Commencer la lecture
+    time.sleep(30 * 60 * 2)  # Attendre 2h (durée de lecture du DFPlayer)
+    log("Fin de la lecture")
 
     # print('Éteindre le lecteur DFPlayer')
     df_player_pin.direction = digitalio.Direction.INPUT  # Éteindre le lecteur DFPlayer
@@ -55,7 +72,8 @@ if rtc.datetime.tm_hour == 7 and 0 <= rtc.datetime.tm_min <= 30:
     alarm.exit_and_deep_sleep_until_alarms(time_alarm)
 
 else:
-    # Si l'heure actuelle n'est pas dans la plage spécifiée, attendre 2 minutes
-    # print("Attendre 2 minutes")
-    time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 120)
+    # Si l'heure actuelle n'est pas dans la plage spécifiée, attendre 15 minutes
+    # print("Attendre 15 minutes")
+    log("Attendre 15 minutes")
+    time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 900)
     alarm.exit_and_deep_sleep_until_alarms(time_alarm)
