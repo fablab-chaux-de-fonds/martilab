@@ -81,9 +81,18 @@ Dans le cadre de ce projet, nous utilisons la [version 8.2.9](https://adafruit-c
     Il est principalement utilisé pour effectuer des tâches de configuration initiale, telles que l'initialisation des périphériques, la configuration des broches GPIO, ou d'autres paramètres de démarrage.
     Les tâches effectuées dans boot.py sont essentielles pour préparer l'environnement d'exécution avant que le code principal dans code.py ne commence à s'exécuter.
 
-Il faut copier les fichier `code.py` (https://github.com/fablab-chaux-de-fonds/martilab/blob/main/software/code.py) et `boot.py` (https://github.com/fablab-chaux-de-fonds/martilab/blob/main/software/boot.py) sur le Raspberry Pi Pico.
+Il faut copier les fichier `code.py` (./software/code.py) et `boot.py` (./software/boot.py) sur le Raspberry Pi Pico.
 
 Plus d'info sur le site de [circuitPython](https://learn.adafruit.com/welcome-to-circuitpython/creating-and-editing-code)
+
+### Installer les dépendances
+Coper le dossier `software/lib` sur le Raspberry Pi Pico.
+
+Liste des dépendance: 
+*  [Adafruit_CircuitPython_Register](https://github.com/adafruit/Adafruit_CircuitPython_Register): Utilisé pour réduire la consomation electrique, avec la bibliothèque `alarm`
+* [Adafruit DS1307 Library](https://docs.circuitpython.org/projects/ds1307/en/latest/index.html): Pour contrôler le module RTC
+* [DFPlayer](https://github.com/bablokb/circuitpython-dfplayer): Pour contrôler le module DFPlayer
+
 
 ### Réglage de l'horloge
 Afin de régler l'horloge, il faut modifier le fichier `code.py` avec l'heure actuelle. Afin de pouvoir modifier le fichier `code.py`, il faut débrancher le Raspberry Pi Pico, presser le bouton debug, et re-brancher le Raspberry Pi Pico à l'ordinateur. 
