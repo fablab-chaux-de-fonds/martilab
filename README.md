@@ -50,11 +50,12 @@ Le placement des composants dans le processus de montage d'un PCB implique de po
 
 | | |
 | ----------- | ----------- |
-|image| PCB sorti d'usine avec: <br><br> <li> **Substrat** : La base du PCB, généralement en matériau isolant comme le FR4, sur laquelle les autres éléments sont montés. <li> **Pistes conductrices** : Des chemins conducteurs en cuivre qui permettent le passage du courant électrique entre les différents composants. <li> **Pads** : Zones de surface métallique destinées à recevoir et à connecter les pattes des composants électroniques. <li> **Vias** : Connexions métalliques percées à travers le substrat pour relier les pistes de différentes couches du PCB. <li> **Couches internes** : Couches internes de cuivre dans le PCB utilisées pour relier les composants et les pistes sur différentes couches. <li> **Marquages** : Informations imprimées sur le PCB pour identifier les composants, les pistes et d'autres éléments lors du montage et du dépannage.
-|image| Brasage du MOSFET, de la Résistance R1, du connecteur JST, et le boutton SW1.
-|image| Brasage des barrettes de connecteurs femelles afin que les modules restent démontables
+|![](./images/PCB.jpg)| PCB sorti d'usine avec: <br><br> <li> **Substrat** : La base du PCB, généralement en matériau isolant comme le FR4, sur laquelle les autres éléments sont montés. <li> **Pistes conductrices** : Des chemins conducteurs en cuivre qui permettent le passage du courant électrique entre les différents composants. <li> **Pads** : Zones de surface métallique destinées à recevoir et à connecter les pattes des composants électroniques. <li> **Vias** : Connexions métalliques percées à travers le substrat pour relier les pistes de différentes couches du PCB. <li> **Couches internes** : Couches internes de cuivre dans le PCB utilisées pour relier les composants et les pistes sur différentes couches. <li> **Marquages** : Informations imprimées sur le PCB pour identifier les composants, les pistes et d'autres éléments lors du montage et du dépannage.
+|![](./images/brasage.jpg)| Brasage du MOSFET, de la Résistance R1, du connecteur JST, et le boutton SW1.
+|![](./images/barrettes.jpg)| Brasage des barrettes de connecteurs femelles afin que les modules restent démontables
 |image| Brasage du module RCT
-|image| Connection des barette de connecteurs
+|![](./images/connexions.jpg)| Connection des barette de connecteurs
+|![](./images/boîte.jpg)| Fixer le PCB dans le boîtier
 
 
 # Software
