@@ -9,7 +9,7 @@ from DFPlayer import DFPlayer  # Importer la classe DFPlayer depuis un fichier e
 
 # Définir l'heure après avoir changé la pile.
 # Décommentez la ligne suivante et réglez l'heure actuelle
-init_time = time.struct_time((2024, 2, 8, 7, 1, 0, 0, -1, -1))
+init_time = time.struct_time((2024, 4, 22, 17, 22, 0, 0, -1, -1))
 
 # Volume du lecteur
 volume = 40
