@@ -9,7 +9,7 @@ from DFPlayer import DFPlayer  # Importer la classe DFPlayer depuis un fichier e
 
 # Définir l'heure après avoir changé la pile.
 # Décommentez la ligne suivante et réglez l'heure actuelle
-# init_time = time.struct_time((2024, 4, 24, 21, 32, 30, 0, -1, -1))
+# init_time = time.struct_time((2024, 5, 26, 18, 15, 00, 0, -1, -1))
 
 # Volume du lecteur
 volume = 100
@@ -59,17 +59,15 @@ print(str(rtc.datetime) + "dfplayer initialized")
 log("dfplayer initialized")
 
 while True:
-    # Vérifier si l'heure actuelle est entre 08:00 et 10:00 ou entre 12:00 et 14:00 ou entre 18:00 et 21:00
-    if 8 <= rtc.datetime.tm_hour <= 9 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rtc.datetime.tm_hour < 22:
-
+    # Vérifier si l'heure actuelle est entre 07:00 et 09:00 ou entre 12:00 et 14:00 ou entre 18:00 et 21:00
+    if 7 <= rtc.datetime.tm_hour <= 8 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rtc.datetime.tm_hour < 22:
         if not is_play:
-            log("Début de la lecture")
             print(str(rtc.datetime) + "Début de la lecture")
-        dfplayer.play()  # Commencer la lecture
-        is_play = True
+            log("Début de la lecture")
+            dfplayer.play()  # Commencer la lecture
+            is_play = True
         
-        # print('Éteindre le lecteur DFPlayer')
-        df_player_pin.direction = digitalio.Direction.INPUT  # Éteindre le lecteur DFPlayer
+        time.sleep(1)
 
     else:
         # Si l'heure actuelle n'est pas dans la plage spécifiée, attendre 15 minutes
@@ -77,8 +75,8 @@ while True:
         if is_play:
             print(str(rtc.datetime) + "Sleep mode")
             log("Sleep mode")
-        dfplayer.stop()
-        is_play=False
+            dfplayer.stop()
+            is_play=False
         
         #time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 900)
         time.sleep(10)
