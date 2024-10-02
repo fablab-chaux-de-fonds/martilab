@@ -14,8 +14,6 @@ from DFPlayer import DFPlayer  # Importer la classe DFPlayer depuis un fichier e
 # Volume du lecteur
 volume = 100
 
-is_play = False
-
 def log(message):
    try:
        with open("log.txt", "a") as f:
@@ -60,24 +58,20 @@ log("dfplayer initialized")
 
 while True:
     # Vérifier si l'heure actuelle est entre 07:00 et 09:00 ou entre 12:00 et 14:00 ou entre 18:00 et 21:00
-    if 7 <= rtc.datetime.tm_hour <= 8 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rtc.datetime.tm_hour < 22:
-        if not is_play:
+    if 7 <= rtc.datetime.tm_hour <= 8 or 12 <= rtc.datetime.tm_hour < 14 or 18 <= rtc.datetime.tm_hour < 21:
+        if dfplayer.get_status() == 0 or dfplayer.get_status() == 2:
             print(str(rtc.datetime) + "Début de la lecture")
             log("Début de la lecture")
             dfplayer.play()  # Commencer la lecture
-            is_play = True
-        
-        time.sleep(1)
+
+        time.sleep(60)
 
     else:
-        # Si l'heure actuelle n'est pas dans la plage spécifiée, attendre 15 minutes
-        # print("Attendre 15 minutes")
-        if is_play:
+        # Si l'heure actuelle n'est pas dans la plage spécifiée, attendre 1 minute
+        if dfplayer.get_status() == 1:
             print(str(rtc.datetime) + "Sleep mode")
             log("Sleep mode")
             dfplayer.stop()
-            is_play=False
         
-        #time_alarm = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + 900)
-        time.sleep(10)
+        time.sleep(60)
         
